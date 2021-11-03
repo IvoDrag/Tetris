@@ -7,7 +7,7 @@
 
 using namespace std;
 
-wstring tetromino[7];
+wstring tetromino[6];
 
 int nFieldWidth = 12;
 int nFieldHeight = 18;
@@ -61,40 +61,36 @@ bool doesPieceFit(int nTetromino, int nRotation, int nPosX, int nPosY) {
 int main() {
 
 	// Create figures
-	tetromino[0].append(L"..X.");
-	tetromino[0].append(L"..X.");
-	tetromino[0].append(L"..X.");
-	tetromino[0].append(L"..X.");
+	// 0-4 are the original tetromino pieces, 5 is created by me!
+	tetromino[0].append(L"XXXX");
+	tetromino[0].append(L"....");
+	tetromino[0].append(L"....");
+	tetromino[0].append(L"....");
 
 	tetromino[1].append(L".X..");
 	tetromino[1].append(L".X..");
-	tetromino[1].append(L"..X.");
-	tetromino[1].append(L"..X.");
+	tetromino[1].append(L".XX.");
+	tetromino[1].append(L"....");
 
-	tetromino[2].append(L".X..");
-	tetromino[2].append(L"..XX.");
-	tetromino[2].append(L"..X.");
+	tetromino[2].append(L".XX.");
+	tetromino[2].append(L"XX..");
+	tetromino[2].append(L"....");
 	tetromino[2].append(L"....");
 
+	tetromino[3].append(L".XX.");
+	tetromino[3].append(L".XX.");
 	tetromino[3].append(L"....");
-	tetromino[3].append(L".XX.");
-	tetromino[3].append(L".XX.");
 	tetromino[3].append(L"....");
 
+	tetromino[4].append(L".XXX");
 	tetromino[4].append(L"..X.");
-	tetromino[4].append(L"...X");
-	tetromino[4].append(L"..XX");
+	tetromino[4].append(L"....");
 	tetromino[4].append(L"....");
 
-	tetromino[5].append(L".X..");
-	tetromino[5].append(L".X..");
-	tetromino[5].append(L".XX..");
+	tetromino[5].append(L".XX.");
+	tetromino[5].append(L"..X.");
+	tetromino[5].append(L".XX.");
 	tetromino[5].append(L"....");
-
-	tetromino[6].append(L".XX.");
-	tetromino[6].append(L"..X.");
-	tetromino[6].append(L".XX.");
-	tetromino[6].append(L"....");
 
 	// Creating playing field! 
 	pField = new unsigned char[nFieldWidth * nFieldHeight];
@@ -112,7 +108,7 @@ int main() {
 	SetConsoleActiveScreenBuffer(hConsole);
 	DWORD dwBytesWritten = 0;
 
-	int nCurrentPiece = 6;
+	int nCurrentPiece = 3;
 	int nCurrentRotation = 0;
 	int nCurrentX = nFieldWidth / 2;
 	int nCurrentY = 0;
@@ -224,7 +220,7 @@ int main() {
 				nCurrentY = 0;
 				nCurrentRotation = 0;
 				srand(time(NULL));
-				nCurrentPiece = rand() % 7;
+				nCurrentPiece = rand() % 6;
 
 				// if piece doesnt fit and it cant play anymore!
 
@@ -235,7 +231,7 @@ int main() {
 		// Draw Field
 		for (int x = 0; x < nFieldWidth; x++) {
 			for (int y = 0; y < nFieldHeight; y++) {
-				screen[(y + 2) * nScreenWidth + (x + 2)] = L" ABCDEFG=#"[pField[y * nFieldWidth + x]];
+				screen[(y + 2) * nScreenWidth + (x + 2)] = L" ABCDEFG=|"[pField[y * nFieldWidth + x]];
 			}
 		}
 
