@@ -13,7 +13,7 @@ Game command prompt (C++)
 [contributors-shield]: https://img.shields.io/github/contributors/IvoDrag/Best-README-Template.svg?style=for-the-badge
 [contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
 
-[forks-shield]: https://img.shields.io/github/forks/IvoDrag/Tetris.svg?style=for-the-badge
+[forks-shield]: https://img.shields.io/github/stars/IvoDrag/Tetris?style=for-the-badge
 [forks-url]: https://github.com/IvoDrag/Tetris/network/members
 
 [stars-shield]: https://img.shields.io/github/stars/IvoDrag/Tetris.svg?style=for-the-badge
