@@ -16,8 +16,8 @@ Game command prompt (C++)
 [forks-shield]: https://img.shields.io/github/forks/IvoDrag/Tetris.svg?style=for-the-badge
 [forks-url]: https://github.com/IvoDrag/Tetris/network/members
 
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
+[stars-shield]: https://img.shields.io/github/stars/IvoDrag/Tetris.svg?style=for-the-badge
+[stars-url]: https://github.com/IvoDrag/Tetris/stargazers
 
 [issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
 [issues-url]: https://github.com/othneildrew/Best-README-Template/issues
